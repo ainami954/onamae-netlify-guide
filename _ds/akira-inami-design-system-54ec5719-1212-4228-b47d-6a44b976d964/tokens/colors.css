@@ -1,0 +1,16 @@
+:root{
+/* Navy ramp — sampled from the kit */
+--navy-900:#1f3044;--navy-800:#293e53;--navy-700:#314053;--navy-600:#3d4f62;--navy-500:#4d5c6c;--navy-400:#5b6475;--navy-300:#7d8796;
+/* Slate (presentation backdrop) */
+--slate-500:#9296a3;--slate-400:#9ba2ac;--slate-200:#d3d7dd;
+/* Neutrals */
+--white:#ffffff;--paper:#f6f7f9;--mist:#e8ebef;--ink:#1d2430;--ink-2:#3b4250;--ink-3:#6b7280;
+/* Blush (portrait backdrop) */
+--blush-200:#f3dcdc;--blush-100:#f9eded;
+/* Semantic */
+--surface-light:var(--white);--surface-dark:var(--navy-800);--surface-dark-2:var(--navy-600);--surface-backdrop:var(--slate-400);
+--text-on-light:var(--ink);--text-on-light-muted:var(--ink-2);--text-on-dark:var(--white);--text-on-dark-muted:rgba(255,255,255,.78);
+--accent:var(--navy-800);--rule-on-dark:rgba(255,255,255,.85);--rule-on-light:var(--navy-800);
+--motif-on-light:rgba(41,62,83,.08);--motif-on-dark:rgba(255,255,255,.08);
+--success:#3f7a5a;--warning:#b08035;--danger:#a3473f;
+}

@@ -1,0 +1,20 @@
+:root{
+--font-display-caps:"Gilda Display","Bodoni Moda",Georgia,serif;
+--font-serif-display:"Young Serif",Georgia,serif;
+--font-sans:"Lexend",system-ui,sans-serif;
+--fw-light:300; /* @kind font */
+--fw-regular:400; /* @kind font */
+--fw-medium:500; /* @kind font */
+--fw-semibold:600; /* @kind font */
+--fw-bold:700; /* @kind font */
+
+/* Scale (px at 1080×1080 post size) */
+--fs-numeral:360px;--fs-banner:96px;--fs-h1:72px;--fs-h2:56px;--fs-h3:40px;--fs-sub:30px;--fs-body:24px;--fs-small:20px;--fs-eyebrow:18px;--fs-micro:14px;
+--lh-tight:1.08; /* @kind font */
+--lh-snug:1.2; /* @kind font */
+--lh-body:1.45; /* @kind font */
+
+--ls-eyebrow:.22em;--ls-banner:.04em;--ls-headline:-.01em;
+/* Semantic */
+--type-headline:var(--font-serif-display);--type-body:var(--font-sans);--type-label:var(--font-sans);
+}

@@ -1,0 +1,2 @@
+body{margin:0;font-family:var(--font-sans);color:var(--text-on-light);-webkit-font-smoothing:antialiased}
+a{color:var(--navy-800);text-decoration:underline;text-underline-offset:3px}a:hover{color:var(--navy-600)}

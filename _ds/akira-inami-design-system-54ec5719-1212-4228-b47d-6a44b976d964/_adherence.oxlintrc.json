@@ -1,0 +1,361 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "components/core/**",
+              "components/social/**",
+              "ui_kits/instagram-posts/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Gilda Display|Lexend|Young Serif))/i]",
+        "message": "Font not provided by the design system. Available: Gilda Display, Lexend, Young Serif."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|style|key|ref|className|style|children)$/]",
+        "message": "<Badge> doesn't accept that prop. Declared props: children, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Badge'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:light|dark)$/]",
+        "message": "<Badge> tone must be one of 'light' | 'dark'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='BigNumeral'] > JSXAttribute > JSXIdentifier[name!=/^(?:value|size|color|style|key|ref|className|style|children)$/]",
+        "message": "<BigNumeral> doesn't accept that prop. Declared props: value, size, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CheckListItem'] > JSXAttribute > JSXIdentifier[name!=/^(?:lead|text|key|ref|className|style|children)$/]",
+        "message": "<CheckListItem> doesn't accept that prop. Declared props: lead, text."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ComparisonTable'] > JSXAttribute > JSXIdentifier[name!=/^(?:columns|rows|tone|style|key|ref|className|style|children)$/]",
+        "message": "<ComparisonTable> doesn't accept that prop. Declared props: columns, rows, tone, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='ComparisonTable'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:dark|light)$/]",
+        "message": "<ComparisonTable> tone must be one of 'dark' | 'light'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CTABar'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|tone|fullBleed|style|key|ref|className|style|children)$/]",
+        "message": "<CTABar> doesn't accept that prop. Declared props: children, tone, fullBleed, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='CTABar'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:dark|light)$/]",
+        "message": "<CTABar> tone must be one of 'dark' | 'light'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DeviceFrame'] > JSXAttribute > JSXIdentifier[name!=/^(?:kind|width|children|style|key|ref|className|style|children)$/]",
+        "message": "<DeviceFrame> doesn't accept that prop. Declared props: kind, width, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='DeviceFrame'] > JSXAttribute[name.name='kind'] > Literal[value!=/^(?:tablet|phone)$/]",
+        "message": "<DeviceFrame> kind must be one of 'tablet' | 'phone'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|color|align|style|key|ref|className|style|children)$/]",
+        "message": "<Eyebrow> doesn't accept that prop. Declared props: children, color, align, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Eyebrow'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center|right)$/]",
+        "message": "<Eyebrow> align must be one of 'left' | 'center' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Headline'] > JSXAttribute > JSXIdentifier[name!=/^(?:children|size|align|color|as|style|key|ref|className|style|children)$/]",
+        "message": "<Headline> doesn't accept that prop. Declared props: children, size, align, color, as, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Headline'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:left|center|right)$/]",
+        "message": "<Headline> align must be one of 'left' | 'center' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Headline'] > JSXAttribute[name.name='as'] > Literal[value!=/^(?:h1|h2|h3|div)$/]",
+        "message": "<Headline> as must be one of 'h1' | 'h2' | 'h3' | 'div'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='Icon'] > JSXAttribute > JSXIdentifier[name!=/^(?:name|size|color|style|key|ref|className|style|children)$/]",
+        "message": "<Icon> doesn't accept that prop. Declared props: name, size, color, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconFeature'] > JSXAttribute > JSXIdentifier[name!=/^(?:icon|lead|children|align|style|key|ref|className|style|children)$/]",
+        "message": "<IconFeature> doesn't accept that prop. Declared props: icon, lead, children, align, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='IconFeature'] > JSXAttribute[name.name='align'] > Literal[value!=/^(?:center|left)$/]",
+        "message": "<IconFeature> align must be one of 'center' | 'left'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PhotoSlot'] > JSXAttribute > JSXIdentifier[name!=/^(?:src|label|fade|style|key|ref|className|style|children)$/]",
+        "message": "<PhotoSlot> doesn't accept that prop. Declared props: src, label, fade, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PhotoSlot'] > JSXAttribute[name.name='fade'] > Literal[value!=/^(?:none|left|right)$/]",
+        "message": "<PhotoSlot> fade must be one of 'none' | 'left' | 'right'."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PostCanvas'] > JSXAttribute > JSXIdentifier[name!=/^(?:tone|motif|frame|size|children|style|key|ref|className|style|children)$/]",
+        "message": "<PostCanvas> doesn't accept that prop. Declared props: tone, motif, frame, size, children, style."
+      },
+      {
+        "selector": "JSXOpeningElement[name.name='PostCanvas'] > JSXAttribute[name.name='tone'] > Literal[value!=/^(?:light|dark)$/]",
+        "message": "<PostCanvas> tone must be one of 'light' | 'dark'."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {
+      "Badge": {
+        "replaces": []
+      },
+      "BigNumeral": {
+        "replaces": []
+      },
+      "CheckListItem": {
+        "replaces": []
+      },
+      "ComparisonTable": {
+        "replaces": []
+      },
+      "CTABar": {
+        "replaces": []
+      },
+      "DeviceFrame": {
+        "replaces": []
+      },
+      "Eyebrow": {
+        "replaces": []
+      },
+      "Headline": {
+        "replaces": []
+      },
+      "Icon": {
+        "replaces": []
+      },
+      "IconFeature": {
+        "replaces": []
+      },
+      "PhotoSlot": {
+        "replaces": []
+      },
+      "PostCanvas": {
+        "replaces": []
+      }
+    },
+    "tokens": [
+      "--accent",
+      "--blush-100",
+      "--blush-200",
+      "--danger",
+      "--dur-fast",
+      "--dur-med",
+      "--ease-out",
+      "--font-display-caps",
+      "--font-sans",
+      "--font-serif-display",
+      "--fs-banner",
+      "--fs-body",
+      "--fs-eyebrow",
+      "--fs-h1",
+      "--fs-h2",
+      "--fs-h3",
+      "--fs-micro",
+      "--fs-numeral",
+      "--fs-small",
+      "--fs-sub",
+      "--fw-bold",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--ink",
+      "--ink-2",
+      "--ink-3",
+      "--inset-frame",
+      "--lh-body",
+      "--lh-snug",
+      "--lh-tight",
+      "--ls-banner",
+      "--ls-eyebrow",
+      "--ls-headline",
+      "--mist",
+      "--motif-on-dark",
+      "--motif-on-light",
+      "--navy-300",
+      "--navy-400",
+      "--navy-500",
+      "--navy-600",
+      "--navy-700",
+      "--navy-800",
+      "--navy-900",
+      "--paper",
+      "--post-margin",
+      "--post-size",
+      "--radius-0",
+      "--radius-device",
+      "--radius-md",
+      "--radius-pill",
+      "--radius-sm",
+      "--rule-hair",
+      "--rule-on-dark",
+      "--rule-on-light",
+      "--rule-thin",
+      "--shadow-device",
+      "--shadow-post",
+      "--slate-200",
+      "--slate-400",
+      "--slate-500",
+      "--space-1",
+      "--space-2",
+      "--space-3",
+      "--space-4",
+      "--space-5",
+      "--space-6",
+      "--space-7",
+      "--space-8",
+      "--space-9",
+      "--success",
+      "--surface-backdrop",
+      "--surface-dark",
+      "--surface-dark-2",
+      "--surface-light",
+      "--text-on-dark",
+      "--text-on-dark-muted",
+      "--text-on-light",
+      "--text-on-light-muted",
+      "--type-body",
+      "--type-headline",
+      "--type-label",
+      "--warning",
+      "--white"
+    ],
+    "tokenKinds": {
+      "--navy-900": "color",
+      "--navy-800": "color",
+      "--navy-700": "color",
+      "--navy-600": "color",
+      "--navy-500": "color",
+      "--navy-400": "color",
+      "--navy-300": "color",
+      "--slate-500": "color",
+      "--slate-400": "color",
+      "--slate-200": "color",
+      "--white": "color",
+      "--paper": "color",
+      "--mist": "color",
+      "--ink": "color",
+      "--ink-2": "color",
+      "--ink-3": "color",
+      "--blush-200": "color",
+      "--blush-100": "color",
+      "--surface-light": "color",
+      "--surface-dark": "color",
+      "--surface-dark-2": "color",
+      "--surface-backdrop": "color",
+      "--text-on-light": "font",
+      "--text-on-light-muted": "font",
+      "--text-on-dark": "font",
+      "--text-on-dark-muted": "font",
+      "--accent": "color",
+      "--rule-on-dark": "color",
+      "--rule-on-light": "color",
+      "--motif-on-light": "color",
+      "--motif-on-dark": "color",
+      "--success": "color",
+      "--warning": "color",
+      "--danger": "color",
+      "--font-display-caps": "font",
+      "--font-serif-display": "font",
+      "--font-sans": "font",
+      "--fw-light": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--fw-semibold": "font",
+      "--fw-bold": "font",
+      "--fs-numeral": "spacing",
+      "--fs-banner": "spacing",
+      "--fs-h1": "spacing",
+      "--fs-h2": "spacing",
+      "--fs-h3": "spacing",
+      "--fs-sub": "spacing",
+      "--fs-body": "spacing",
+      "--fs-small": "spacing",
+      "--fs-eyebrow": "spacing",
+      "--fs-micro": "spacing",
+      "--lh-tight": "font",
+      "--lh-snug": "font",
+      "--lh-body": "font",
+      "--ls-eyebrow": "spacing",
+      "--ls-banner": "spacing",
+      "--ls-headline": "spacing",
+      "--type-headline": "font",
+      "--type-body": "font",
+      "--type-label": "font",
+      "--space-1": "spacing",
+      "--space-2": "spacing",
+      "--space-3": "spacing",
+      "--space-4": "spacing",
+      "--space-5": "spacing",
+      "--space-6": "spacing",
+      "--space-7": "spacing",
+      "--space-8": "spacing",
+      "--space-9": "spacing",
+      "--post-size": "spacing",
+      "--post-margin": "spacing",
+      "--inset-frame": "spacing",
+      "--radius-0": "radius",
+      "--radius-sm": "radius",
+      "--radius-md": "radius",
+      "--radius-device": "radius",
+      "--radius-pill": "radius",
+      "--rule-thin": "spacing",
+      "--rule-hair": "spacing",
+      "--shadow-post": "shadow",
+      "--shadow-device": "shadow",
+      "--ease-out": "other",
+      "--dur-fast": "other",
+      "--dur-med": "other"
+    },
+    "fontFamilies": [
+      "Gilda Display",
+      "Lexend",
+      "Young Serif"
+    ]
+  }
+}
